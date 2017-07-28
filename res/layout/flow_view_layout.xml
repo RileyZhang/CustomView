@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.example.customview.view.ScaleView
+        android:id="@+id/scale_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:textColor="@color/col_bc6548"
+        app:lineColor="@color/col_474948"
+        ></com.example.customview.view.ScaleView>
+    
+    <TextView 
+        android:id="@+id/scale_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="选择的数字是："
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+    
+    <com.example.customview.view.FlowView
+        android:id="@+id/flow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@color/col_f6f6f6"
+        >
+        
+    </com.example.customview.view.FlowView>
+
+</LinearLayout>

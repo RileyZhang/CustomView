@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleSize" format="dimension"></attr>
+    <attr name="titleColor" format="color"></attr>
+    <attr name="outCircleColor" format="color"></attr>
+    <attr name="inCircleColor" format="color"></attr>
+    <attr name="lineColor" format="color"></attr>
+    
+    <attr name="highLightTextColor" format="color"></attr>
+    <attr name="commonTextColor" format="color"></attr>
+    
+    <attr name="textColor" format="color"></attr>
+    <attr name="textSize" format="dimension"></attr>
+    
+    <attr name="leftColor" format="color"></attr>
+    <attr name="rightColor" format="color"></attr>
+    
+    <declare-styleable name="WeiBoView">
+        <attr name="titleSize"></attr>
+        <attr name="titleColor"></attr>
+        <attr name="outCircleColor"></attr>
+        <attr name="inCircleColor"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="QQHealthView">
+        <attr name="highLightTextColor"></attr>
+        <attr name="commonTextColor"></attr>
+        <attr name="lineColor"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="scaleView">
+        <attr name="textColor"></attr>
+        <attr name="lineColor"></attr>
+        <attr name="textSize"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="chartView">
+        <attr name="textColor"></attr>
+        <attr name="leftColor"></attr>
+        <attr name="rightColor"></attr>
+    </declare-styleable>
+</resources>

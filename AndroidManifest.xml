@@ -9,6 +9,7 @@
         android:targetSdkVersion="21" />
 
     <application
+        android:name="com.example.customview.CustonViewApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -22,6 +23,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity 
+            android:name="com.example.customview.activity.CallBackActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.WeiBoYunDongJiFenActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.QQHealthActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.FlowActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.ChartActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.ConflictActivity"
+            ></activity>
     </application>
 
 </manifest>
