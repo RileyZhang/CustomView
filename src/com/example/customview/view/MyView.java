@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class MyView extends View {
@@ -83,4 +84,26 @@ public class MyView extends View {
 		Log.i(TAG, "onFinishInflate");
 	}
 	
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		Log.i(TAG, "MyView dispatchTouchEvent event = " + event.getAction());
+//		super.dispatchTouchEvent(event);
+		return super.dispatchTouchEvent(event);//super.dispatchTouchEvent(event)
+	}
+	
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		Log.i(TAG, "MyView onTouchEvent event = " + event.getAction());
+//		super.onTouchEvent(event);
+		return super.onTouchEvent(event);//super.onTouchEvent(event)
+	}
+	
+	@Override
+	public void setOnTouchListener(OnTouchListener l) {
+		// TODO Auto-generated method stub
+		Log.i(TAG, "MyView setOnTouchListener event = ");
+		super.setOnTouchListener(l);
+	}
 }

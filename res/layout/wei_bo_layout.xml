@@ -18,6 +18,7 @@
         android:id="@+id/increase"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:letterSpacing="1.5"
         android:text="增加分数"
         />
 
@@ -25,6 +26,14 @@
         android:id="@+id/decrease"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:letterSpacing="0.8"
         android:text="减少分数"
+        />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:text="test Letter Space"
         />
 </LinearLayout>

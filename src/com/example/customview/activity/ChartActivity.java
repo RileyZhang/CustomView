@@ -10,6 +10,7 @@ import com.example.customview.view.ChartView.GetNumberListener;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
@@ -58,5 +59,7 @@ public class ChartActivity extends Activity {
 				mRelativeLayout.addView(mTextView);
 			}
 		});
+		
+		
 	}
 }

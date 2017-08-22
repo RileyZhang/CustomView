@@ -4,11 +4,19 @@ import com.example.customview.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.EmbossMaskFilter;
+import android.graphics.MaskFilter;
 import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Typeface;
+import android.graphics.Xfermode;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -119,6 +127,15 @@ public class WeiBoView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
+		Rect rect = new Rect(50, 50, 150, 150);
+		Paint paint = new Paint();
+		paint.setColor(Color.RED);
+		paint.setMaskFilter(new EmbossMaskFilter(new float[]{20, 20, 20}, 0.4f, 10, 15));
+		canvas.drawRect(rect, paint);
+		
+		Canvas mCanvas = new Canvas();
+		mCanvas.save();
+		
 		mPaint.setColor(outCirclrColor);
 		mPaint.setAntiAlias(true);
 		mPaint.setStyle(Paint.Style.STROKE);
@@ -132,6 +149,18 @@ public class WeiBoView extends View {
 		
 		mPaint.setTextSize(textSize/3);
 		canvas.drawText("·Ö", getWidth() * 3/5, getHeight()/3, mPaint);
+		
+		mPaint.setTextSize(textSize/2);
+		Typeface font = Typeface.create(Typeface.DEFAULT, Typeface.BOLD_ITALIC);
+		mPaint.setTypeface(font);
+		mPaint.setTextSkewX((float)0.5);
+		mPaint.setFakeBoldText(true);
+		Path path = new Path();
+		String string = "Î¢²©½¡¿µ";
+		mPaint.getTextPath(string, 0, string.length(), getWidth()*1/4, getHeight()*3/5, path);
+		path.close();
+		canvas.drawPath(path, mPaint);
+//		canvas.drawText(string, getWidth()*1/4, getHeight()*3/5, mPaint);
 		
 		mCirclePaint.setAntiAlias(true);
 		mCirclePaint.setStyle(Paint.Style.STROKE);
