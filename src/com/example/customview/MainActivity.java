@@ -8,6 +8,7 @@ import com.example.customview.activity.AnimationViewActivity;
 import com.example.customview.activity.CallBackActivity;
 import com.example.customview.activity.ChartActivity;
 import com.example.customview.activity.ConflictActivity;
+import com.example.customview.activity.CustomDrawableActivity;
 import com.example.customview.activity.FlowActivity;
 import com.example.customview.activity.QQHealthActivity;
 import com.example.customview.activity.WangYiActivity;
@@ -31,6 +32,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
 	private MainAdapter mMainAdapter;
 	private DrawerLayout mDrawerLayout;
 	private String[] stringArray = {"自定义view的回调步骤", "微博运动几分自定义view", "QQ健康view",
-			"滑动刻度尺view", "柱状图view","滑动冲突view", "MaterialDesign view", "Animation view"};
+			"滑动刻度尺view", "柱状图view","滑动冲突view", "MaterialDesign view", "Animation view",
+			"custom drawable"};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				// TODO Auto-generated method stub
+				getItem(1,2,3,4,5,6);
 				switch(position) {
 				case 0:
 					Intent intent = new Intent(MainActivity.this, CallBackActivity.class);
@@ -104,11 +108,19 @@ public class MainActivity extends AppCompatActivity {
 					Intent intent8 = new Intent(MainActivity.this, AnimationViewActivity.class);
 					startActivity(intent8);
 					break;
+				case 8:
+					Intent intent9 = new Intent(MainActivity.this, CustomDrawableActivity.class);
+					startActivity(intent9);
+					break;
 				default:
 					break;
 				}
 			}
 		});
+	}
+	
+	private void getItem(int... value) {
+		Log.i("riley", "value.length = " + value.length);
 	}
 	
 	private void setupDrawerContent(NavigationView navigationView)

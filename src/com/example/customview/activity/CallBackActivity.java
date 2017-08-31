@@ -5,6 +5,7 @@ import com.example.customview.view.MyView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,12 +18,30 @@ public class CallBackActivity extends Activity {
 	private static final String TAG = "MyView";
 	private MyView mMyView;
 	private LinearLayout mMyLinearLayout;
+	private Handler myHandler = new Handler();
+	private Runnable mLoadingRunnable = new Runnable() {
+	    @Override
+	    public void run() {
+//	      updateText();
+	    }
+	  };
+	  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.call_back_layout);
 		mMyLinearLayout = (LinearLayout)findViewById(R.id.my_linearlayout);
+		mMyLinearLayout.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		});
+		
+		
 		mMyView = (MyView)findViewById(R.id.my_view);
 		mMyView.setOnTouchListener(new OnTouchListener() {
 			
@@ -42,6 +61,22 @@ public class CallBackActivity extends Activity {
 				Log.i(TAG, "CallBackActivity setOnTouchListener onClick ");
 			}
 		});
+		
+		
+		getWindow().getDecorView().post(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				myHandler.post(mLoadingRunnable);
+			}
+		});
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
 	}
 	
 	@Override

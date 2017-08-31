@@ -49,6 +49,9 @@
         <activity 
             android:name="com.example.customview.activity.AnimationViewActivity"
             ></activity>
+        <activity 
+            android:name="com.example.customview.activity.CustomDrawableActivity"
+            ></activity>
     </application>
 
 </manifest>

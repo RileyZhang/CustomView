@@ -1,11 +1,13 @@
 package com.example.customview.view;
 
+import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -74,6 +76,7 @@ public class MyLinearLayout extends LinearLayout {
 			Log.i(TAG, "ACTION_UP i = " + i);
 			mAnimator = ValueAnimator.ofInt(0, i);
 			mAnimator.setDuration(500);
+//			mAnimator.setInterpolator(new AccelerateInterpolator());
 			mAnimator.addUpdateListener(new AnimatorUpdateListener() {
 				
 				@Override
