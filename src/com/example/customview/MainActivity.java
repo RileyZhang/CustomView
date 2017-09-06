@@ -9,10 +9,13 @@ import com.example.customview.activity.CallBackActivity;
 import com.example.customview.activity.ChartActivity;
 import com.example.customview.activity.ConflictActivity;
 import com.example.customview.activity.CustomDrawableActivity;
+import com.example.customview.activity.FlodButtonActivity;
 import com.example.customview.activity.FlowActivity;
 import com.example.customview.activity.QQHealthActivity;
+import com.example.customview.activity.SocketActivity;
 import com.example.customview.activity.WangYiActivity;
 import com.example.customview.activity.WeiBoYunDongJiFenActivity;
+import com.example.customview.testAidl.CalculateClient;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 	private DrawerLayout mDrawerLayout;
 	private String[] stringArray = {"自定义view的回调步骤", "微博运动几分自定义view", "QQ健康view",
 			"滑动刻度尺view", "柱状图view","滑动冲突view", "MaterialDesign view", "Animation view",
-			"custom drawable"};
+			"custom drawable", "aidl activity", "可折叠按钮", "socket test"};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -111,6 +114,18 @@ public class MainActivity extends AppCompatActivity {
 				case 8:
 					Intent intent9 = new Intent(MainActivity.this, CustomDrawableActivity.class);
 					startActivity(intent9);
+					break;
+				case 9:
+					Intent intent10 = new Intent(MainActivity.this, CalculateClient.class);
+					startActivity(intent10);
+					break;
+				case 10:
+					Intent intent11 = new Intent(MainActivity.this, FlodButtonActivity.class);
+					startActivity(intent11);
+					break;
+				case 11:
+					Intent intent12 = new Intent(MainActivity.this, SocketActivity.class);
+					startActivity(intent12);
 					break;
 				default:
 					break;

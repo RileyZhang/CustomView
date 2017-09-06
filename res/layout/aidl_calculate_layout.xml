@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Button 
+        android:id="@+id/bind_server"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="bind server"
+        />
+    <Button 
+        android:id="@+id/unbind_server"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="unbind server"
+        />
+    <Button 
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="calculate"
+        />
+    <Button
+        android:id="@+id/add_computer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="add computer"
+        />
+    <Button 
+        android:id="@+id/rect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="rect area"
+        />
+    <Button 
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="add multiply"
+        />
+    <Button 
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="register"
+        />
+    <Button 
+        android:id="@+id/unregister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ungister"
+        />
+
+</LinearLayout>

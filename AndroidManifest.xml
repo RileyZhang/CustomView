@@ -52,6 +52,33 @@
         <activity 
             android:name="com.example.customview.activity.CustomDrawableActivity"
             ></activity>
+        <activity
+            android:name="com.example.customview.testAidl.CalculateClient" 
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.FlodButtonActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.customview.activity.SocketActivity"
+            ></activity>
+        
+        <service 
+            android:name="com.example.customview.testAidl.CalculateServer"
+            android:process=":server"
+            >
+            <intent-filter>
+                <action android:name="com.example.customview.testAidl.CalculateServer"/>
+            </intent-filter>
+        </service>
+        <service 
+            android:name="com.example.customview.testAidl.BinderPoolService"
+            ></service>
     </application>
 
+    <uses-permission 
+        android:name="android.permission.INTERNET"
+        />
+    <uses-permission 
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        />
 </manifest>
